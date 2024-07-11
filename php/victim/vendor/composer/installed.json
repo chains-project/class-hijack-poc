@@ -1,0 +1,33 @@
+{
+    "packages": [
+        {
+            "name": "genuine/library",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../libs/genuine",
+                "reference": "468113409434027b90f5be8f68bf98e1f450acd0"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Genuine\\Library\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "genuine",
+                    "email": "genuine@mail.local"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../genuine/library"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

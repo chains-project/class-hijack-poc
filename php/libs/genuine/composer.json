@@ -1,0 +1,15 @@
+{
+    "name": "genuine/library",
+    "autoload": {
+        "psr-4": {
+            "Genuine\\Library\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "genuine",
+            "email": "genuine@mail.local"
+        }
+    ],
+    "require": {}
+}

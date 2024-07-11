@@ -1,0 +1,23 @@
+{
+    "name": "victim/application",
+    "autoload": {
+        "psr-4": {
+            "Victim\\Application\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "victim",
+            "email": "victim@mail.local"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../libs/genuine"
+        }
+    ],
+    "require": {
+        "genuine/library": "@dev"
+    }
+}

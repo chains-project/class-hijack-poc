@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e637164a68bbd3d470f2a501f50bd8ec",
+    "packages": [
+        {
+            "name": "genuine/library",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../libs/genuine",
+                "reference": "468113409434027b90f5be8f68bf98e1f450acd0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Genuine\\Library\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "genuine",
+                    "email": "genuine@mail.local"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "genuine/library": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

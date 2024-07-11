@@ -1,0 +1,16 @@
+{
+    "name": "evil/library",
+    "autoload": {
+        "psr-4": {
+            "Evil\\Library\\": "src/",
+            "Genuine\\Library\\": "attack/"
+        }
+    },
+    "authors": [
+        {
+            "name": "evil",
+            "email": "evil@mail.local"
+        }
+    ],
+    "require": {}
+}

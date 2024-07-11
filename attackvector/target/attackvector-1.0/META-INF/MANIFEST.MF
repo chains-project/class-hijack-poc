@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Apache Maven 3.9.6
-Built-By: federicobono
-Build-Jdk: 17.0.9
-
