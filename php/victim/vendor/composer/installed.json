@@ -1,6 +1,34 @@
 {
     "packages": [
         {
+            "name": "evil/library",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../libs/evil",
+                "reference": "85cab5ef6052455339db46e72c72bbd467189cfe"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Evil\\Library\\": "src/",
+                    "Genuine\\Library\\": "attack/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "evil",
+                    "email": "evil@mail.local"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../evil/library"
+        },
+        {
             "name": "genuine/library",
             "version": "dev-main",
             "version_normalized": "dev-main",

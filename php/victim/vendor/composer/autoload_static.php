@@ -15,6 +15,10 @@ class ComposerStaticInitf5602172d7e92d1b11a0490ec9866404
         array (
             'Genuine\\Library\\' => 16,
         ),
+        'E' => 
+        array (
+            'Evil\\Library\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -24,7 +28,12 @@ class ComposerStaticInitf5602172d7e92d1b11a0490ec9866404
         ),
         'Genuine\\Library\\' => 
         array (
-            0 => __DIR__ . '/..' . '/genuine/library/src',
+            0 => __DIR__ . '/..' . '/evil/library/attack',
+            1 => __DIR__ . '/..' . '/genuine/library/src',
+        ),
+        'Evil\\Library\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/evil/library/src',
         ),
     );
 

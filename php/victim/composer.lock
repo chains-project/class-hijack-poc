@@ -4,8 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e637164a68bbd3d470f2a501f50bd8ec",
+    "content-hash": "5efdce3378f638990653e0c86a2e3222",
     "packages": [
+        {
+            "name": "evil/library",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../libs/evil",
+                "reference": "85cab5ef6052455339db46e72c72bbd467189cfe"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Evil\\Library\\": "src/",
+                    "Genuine\\Library\\": "attack/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "evil",
+                    "email": "evil@mail.local"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "genuine/library",
             "version": "dev-main",
@@ -35,6 +60,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "evil/library": 20,
         "genuine/library": 20
     },
     "prefer-stable": false,

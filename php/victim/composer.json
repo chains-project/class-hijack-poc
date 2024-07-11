@@ -15,9 +15,14 @@
         {
             "type": "path",
             "url": "../libs/genuine"
+        },
+        {
+            "type": "path",
+            "url": "../libs/evil"
         }
     ],
     "require": {
+        "evil/library": "@dev",
         "genuine/library": "@dev"
     }
 }
