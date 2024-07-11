@@ -3,3 +3,5 @@
 **/.DS_Store
 .idea
 .vscode
+java/cwa-server/*
+java/json-schema/*
