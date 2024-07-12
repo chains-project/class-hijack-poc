@@ -7,6 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Victim\\Application\\' => array($baseDir . '/src'),
-    'Genuine\\Library\\' => array($vendorDir . '/evil/library/attack', $vendorDir . '/genuine/library/src'),
-    'Evil\\Library\\' => array($vendorDir . '/evil/library/src'),
+    'Genuine\\Library\\' => array($vendorDir . '/genuine/library/src'),
 );

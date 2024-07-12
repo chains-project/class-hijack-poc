@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "evil/library": "@dev",
-        "genuine/library": "@dev"
+        "genuine/library": "@dev",
+        "evil/library": "@dev"
     }
 }

@@ -3,7 +3,7 @@
         'name' => 'victim/application',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '90b8c1800e872130cccae5d38533584cf0cc7222',
+        'reference' => '379340c33c07b55922b0352a44806f4baba9f24b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'evil/library' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '85cab5ef6052455339db46e72c72bbd467189cfe',
+            'reference' => '45a1a5b499d514e2c861dd702f4f03f317fe059b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../evil/library',
             'aliases' => array(),
@@ -31,7 +31,7 @@
         'victim/application' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '90b8c1800e872130cccae5d38533584cf0cc7222',
+            'reference' => '379340c33c07b55922b0352a44806f4baba9f24b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

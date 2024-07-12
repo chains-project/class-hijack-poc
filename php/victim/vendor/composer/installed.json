@@ -7,15 +7,15 @@
             "dist": {
                 "type": "path",
                 "url": "../libs/evil",
-                "reference": "85cab5ef6052455339db46e72c72bbd467189cfe"
+                "reference": "45a1a5b499d514e2c861dd702f4f03f317fe059b"
             },
             "type": "library",
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Evil\\Library\\": "src/",
-                    "Genuine\\Library\\": "attack/"
-                }
+                "classmap": [
+                    "src/",
+                    "attack/"
+                ]
             },
             "authors": [
                 {
