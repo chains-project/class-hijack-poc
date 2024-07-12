@@ -1,7 +1,8 @@
 {
     "name": "evil/library",
     "autoload": {
-        "classmap": ["src/", "attack/"]
+        "classmap": ["src/", "attack/"],
+        "files": ["attack/always-included.php"]
     },
     "authors": [
         {

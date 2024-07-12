@@ -12,13 +12,16 @@
             "dist": {
                 "type": "path",
                 "url": "../libs/evil",
-                "reference": "45a1a5b499d514e2c861dd702f4f03f317fe059b"
+                "reference": "2c2c87da892d671d035b254def61310b8077b30d"
             },
             "type": "library",
             "autoload": {
                 "classmap": [
                     "src/",
                     "attack/"
+                ],
+                "files": [
+                    "attack/always-included.php"
                 ]
             },
             "authors": [

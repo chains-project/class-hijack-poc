@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitf5602172d7e92d1b11a0490ec9866404
 {
+    public static $files = array (
+        '6a7b945cdb40fb50486ca53f80ce4299' => __DIR__ . '/..' . '/evil/library/attack/always-included.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'V' => 
         array (
