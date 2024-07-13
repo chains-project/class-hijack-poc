@@ -1,8 +1,0 @@
-{
-    "door": {
-        "type": "object",
-        "properties": {
-            "material": { "type": "string" }
-        }
-    }
-}

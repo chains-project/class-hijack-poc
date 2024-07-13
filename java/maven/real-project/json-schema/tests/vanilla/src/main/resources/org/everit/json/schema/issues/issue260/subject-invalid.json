@@ -1,7 +1,0 @@
-{
-   "house": {
-       "rooms": [ {
-           "door": { "material": 1 }
-       }]
-   }
-}

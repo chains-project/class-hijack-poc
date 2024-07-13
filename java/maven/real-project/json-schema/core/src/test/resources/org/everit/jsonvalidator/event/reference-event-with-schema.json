@@ -1,6 +1,0 @@
-{
-  "type": "ref",
-  "schema": {
-    "$ref": "#/definitions/Stuff"
-  }
-}

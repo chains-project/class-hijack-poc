@@ -1,8 +1,0 @@
-{
-  "type": "ref",
-  "instance": {
-    "hello": [
-      "world"
-    ]
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "properties": {
-    "billing_address": {
-      "$ref": "/definitions.json#/definitions/address"
-    }
-  }
-}
-
