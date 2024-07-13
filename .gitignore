@@ -3,5 +3,6 @@
 **/.DS_Store
 .idea
 .vscode
+.gradle
 **/cwa-server/*
 **/json-schema/*

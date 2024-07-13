@@ -1,0 +1,9 @@
+/Users/user/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.1.0-jre/9b7ed39143d59e8eabcc6f91ffe4d23db2efe558/guava-33.1.0-jre.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/org.evil/attackerlibrary/1.0/ee8a0a6107331316919f61e88b06c06425601f2/attackerlibrary-1.0.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/org.test/nicelibrary/1.2/949513f3b0d57afdcf1d6ab22620cb4fdc3189c1/nicelibrary-1.2.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.2/c4a06a64e650562f30b7bf9aaec1bfed43aca12b/failureaccess-1.0.2.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.42.0/638ec33f363a94d41a4f03c3e7d3dcfba64e402d/checker-qual-3.42.0.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.26.1/c1fde57694bdc14e8618899aaa6e857d9465d7de/error_prone_annotations-2.26.1.jar:
+/Users/user/.gradle/caches/modules-2/files-2.1/org.evil/fakelibrary/1.0/9f0eca325442dddc93a5093a62b8c1e966aeaa3e/fakelibrary-1.0.jar

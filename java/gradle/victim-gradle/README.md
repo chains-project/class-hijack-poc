@@ -1,0 +1,1 @@
+- Gradle uses BFS to build the classpath, this means that the attack is still possible but you can only target libraries that are on the same level (or deeper) on the right side of the tree.
