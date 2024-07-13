@@ -1,0 +1,10 @@
+.project
+.settings
+.classpath
+target
+.checkstyle
+.fbExcludeFilterFile
+.pmd
+.pmdruleset.xml
+.idea
+*.iml

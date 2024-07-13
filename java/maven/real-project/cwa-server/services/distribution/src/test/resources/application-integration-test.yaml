@@ -1,0 +1,11 @@
+---
+services:
+  distribution:
+    shifting-policy-threshold: 140
+    supported-countries:
+      - DE
+logging:
+  level:
+    org:
+      springframework: off
+    root: off
