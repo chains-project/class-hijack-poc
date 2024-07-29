@@ -3,7 +3,7 @@
         'name' => 'victim/application',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c1fc1c7a7e6bcf10b870bc1aea106981c0bba6a9',
+        'reference' => '11edb68e1388f088a950d85dd95827791e495a1d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'victim/application' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c1fc1c7a7e6bcf10b870bc1aea106981c0bba6a9',
+            'reference' => '11edb68e1388f088a950d85dd95827791e495a1d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
