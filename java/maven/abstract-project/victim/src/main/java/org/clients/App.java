@@ -12,6 +12,6 @@ public class App
     public static void main( String[] args )
     {
         NiceClass.niceHelperMethod();
-        SecondClass.method();
+//        SecondClass.method();
     }
 }
