@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the Proof-of-Concept (PoC) code and replication scripts for the paper [**"Java-Class-Hijack: Software Supply Chain Attack for Java based on Maven Dependency Resolution and Java Classloading"**](https://) by Federico Bono, Frank Reyes, Aman Sharma, Benoit Baudry, and Martin Monperrus.
+This repository contains the Proof-of-Concept (PoC) code and replication scripts for the paper [**"Java-Class-Hijack: Software Supply Chain Attack for Java based on Maven Dependency Resolution and Java Classloading"**](https://arxiv.org/abs/2407.18760) by Federico Bono, Frank Reyes, Aman Sharma, Benoit Baudry, and Martin Monperrus.
 
 ### Abstract
 
