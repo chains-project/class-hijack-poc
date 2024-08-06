@@ -1,0 +1,4 @@
+--patch-module
+victim=_
+--add-reads
+victim=ALL-UNNAMED

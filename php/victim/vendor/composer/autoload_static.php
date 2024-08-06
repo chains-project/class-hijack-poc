@@ -36,6 +36,7 @@ class ComposerStaticInitf5602172d7e92d1b11a0490ec9866404
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Evil\\Library\\AClass' => __DIR__ . '/..' . '/evil/library/src/AClass.php',
         'Genuine\\Library\\AClass' => __DIR__ . '/..' . '/evil/library/attack/AClass.php',
+        'Victim\\Application\\Application' => __DIR__ . '/../..' . '/src/Application.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
