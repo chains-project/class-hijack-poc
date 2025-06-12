@@ -1,0 +1,9 @@
+services:
+  reposilite:
+    image: dzikoysk/reposilite:latest
+    environment:
+      REPOSILITE_OPTS: --token admin:secret
+    ports:
+      - "80:8080"
+    volumes:
+      - ./data:/app/data
