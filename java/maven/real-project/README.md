@@ -1,5 +1,5 @@
 - Unzip the `data.zip` file in reposilite folder
-- Startup reposilite to fake malicius takeover of json-schema: `cd reposilite && docker compose up -d && cd ..`
+- Startup reposilite to fake malicious takeover of json-schema: `cd reposilite && docker compose up -d && cd ..`
 - Build docker images for cwa-server: `cd cwa-server && docker compose build`
     - If build fails for localhost connection issues you will need to change all `localhost/releases` reference in pom files found in `cwa-server` and `json-schema` folders with `host.docker.internal/releases`
 - (optional) stop reposilite docker image, it may brake things later
