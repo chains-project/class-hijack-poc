@@ -6,3 +6,4 @@
 .gradle
 **/cwa-server/*
 **/json-schema/*
+target
