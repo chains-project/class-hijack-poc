@@ -1,11 +1,40 @@
-# Java Cross-Dependency Injection PoC
-This repository contains a PoC for a malicius attack based on the way depedencies are resolved by Maven in Java projects.
-We define 4 packages: a victim, a nicelibrary, an attacker-library and a fakelibrary.
+# Hijacking in abstract-project
 
-- The victim has 2 dependency: nicelibrary and attacker-library.
-- The victim uses NiceClass from nicelibrary.
-- attacker-library adds the fakelibrary to its dependencies.
-- fakelibrary defines the same package as nicelibrary and contains a malicius NiceClass
-- since attacker-library is defined before nicelibrary in victim pom file, NiceClass now is resolved with the fakelibrary version
-  
+There are two projects in this directory:
+1. `install-me-first`. This project setups the dependency tree for the victim.
+2. `victim`. This project contains the victim application.
 
+## Normal Execution
+
+1. ```shell
+   install-me-first$ mvn clean install
+   ```
+   This will install dependencies `D1`, `D11`, and `D12` in the local Maven repository.
+2. ```shell
+   victim$ mvn clean package
+   ```
+   This will compile the victim application which is dependent upon `D1`.
+3. ```shell
+   victim$ java -jar target/victim-1.0.jar
+   ```
+   This will output:
+   ```shell
+   hello world!
+   ```
+
+## Malicious Execution
+
+1. Simply change the first command to inject the malicious class `org.apache.
+commons.lang3.StringUtils`.
+   ```shell
+   install-me-first$ mvn clean install -Pinject
+   ```
+2. Then run the victim application, after packaging, as before:
+   ```shell
+    victim$ java -jar target/victim-1.0.jar
+    ```
+    This will output:
+    ```
+   shadow file sent to hacker ;)
+   hello world!
+   ```
