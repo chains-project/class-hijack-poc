@@ -72,6 +72,8 @@ commons.lang3.StringUtils`.
    lang3.StringUtils` class with the malicious one if the malicious class is 
    present later in the classpath.
 
+### Output
+
 All these methods will result in the same output when running the victim application:
 ```
 shadow file sent to hacker ;)
