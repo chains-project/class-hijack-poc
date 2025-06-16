@@ -17,20 +17,6 @@
         <maven.compiler.release>11</maven.compiler.release>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>dev.scored</groupId>
-            <artifactId>D1</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- gadget dependency -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.17.0</version>
-        </dependency>
-    </dependencies>
 
     <profiles>
         <profile>
@@ -64,7 +50,22 @@
                     </plugin>
                 </plugins>
             </build>
+            <dependencies>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+            </dependencies>
         </profile>
+
         <profile>
             <id>assembly</id>
             <build>
@@ -95,6 +96,20 @@
                     </plugin>
                 </plugins>
             </build>
+            <dependencies>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+            </dependencies>
         </profile>
 
         <profile>
@@ -135,9 +150,22 @@
                             </archive>
                         </configuration>
                     </plugin>
-
                 </plugins>
             </build>
+            <dependencies>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+            </dependencies>
         </profile>
 
         <profile>
@@ -162,6 +190,65 @@
                     </plugin>
                 </plugins>
             </build>
+            <dependencies>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>bundle</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.felix</groupId>
+                        <artifactId>maven-bundle-plugin</artifactId>
+                        <version>6.0.0</version>
+                        <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>bundle</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>bundle</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <instructions>
+                                <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+                                <Bundle-Version>${project.version}</Bundle-Version>
+                                <Main-Class>dev.scored.Main</Main-Class>
+                                <Embed-Dependency>*;scope=compile|runtime;inline=true</Embed-Dependency>
+                                <Embed-Transitive>true</Embed-Transitive>
+                            </instructions>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+            </dependencies>
         </profile>
     </profiles>
 </project>
