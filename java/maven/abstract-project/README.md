@@ -74,7 +74,8 @@ commons.lang3.StringUtils`.
 
 ### Output
 
-All these methods will result in the same output when running the victim application:
+All these methods will result in the same output (except 
+`maven-assembly-plugin`) when running the victim application:
 ```
 shadow file sent to hacker ;)
 hello world!
