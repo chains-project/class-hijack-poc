@@ -250,5 +250,62 @@
                 </dependency>
             </dependencies>
         </profile>
+
+        <profile>
+            <id>quarkus</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.quarkus</groupId>
+                        <artifactId>quarkus-maven-plugin</artifactId>
+                        <version>3.23.3</version>
+                        <configuration>
+                            <properties>
+                                <quarkus.native.container-build>false</quarkus.native.container-build>
+                                <quarkus.package.jar.enabled>true</quarkus.package.jar.enabled>
+                                <quarkus.package.jar.type>uber-jar</quarkus.package.jar.type>
+                                <quarkus.package.main-class>dev.scored.Main</quarkus.package.main-class>
+                                <quarkus.package.output-directory>${project.build.directory}</quarkus.package.output-directory>
+                                <quarkus.package.runner-suffix>-quarkus</quarkus.package.runner-suffix>
+                            </properties>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>uber-jar</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>build</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.quarkus.platform</groupId>
+                        <artifactId>quarkus-bom</artifactId>
+                        <version>3.23.3</version>
+                        <type>pom</type>
+                        <scope>import</scope>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+            <dependencies>
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
+
+                <!-- gadget dependency -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.17.0</version>
+                </dependency>
+            </dependencies>
+        </profile>
     </profiles>
 </project>

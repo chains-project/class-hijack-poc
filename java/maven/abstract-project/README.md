@@ -72,6 +72,15 @@ commons.lang3.StringUtils`.
    lang3.StringUtils` class with the malicious one if the malicious class is 
    present later in the classpath.
 
+6. `io.quarkus:quarkus-maven-plugin`:
+   ```shell
+    mvn clean package -Dquarkus
+    java -jar target/victim-1.0-quarkus.jar
+   ```
+   It gives a warning about the exact class being overridden, but the malicious class is still executed.
+   ```text
+   [WARNING] [io.quarkus.deployment.pkg.steps.JarResultBuildStep] Dependencies with duplicate files detected. The dependencies [dev.scored:D1::jar:1.0.0[paths: /home/aman/.m2/repository/dev/scored/D1/1.0.0/D1-1.0.0.jar;], org.apache.commons:commons-lang3::jar:3.17.0[paths: /home/aman/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar;]] contain duplicate files, e.g. org/apache/commons/lang3/StringUtils.class
+   ```
 ### Output
 
 All these methods will result in the same output (except 
