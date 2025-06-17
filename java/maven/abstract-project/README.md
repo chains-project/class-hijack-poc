@@ -39,14 +39,14 @@ commons.lang3.StringUtils`.
    All the dependencies will be packaged into a single JAR file, including the malicious class.
 2. `org.apache.maven.plugins:maven-assembly-plugin`
    ```shell
-   mvn clean package -Dassembly
+   mvn clean package -Passembly
     java -jar target/victim-1.0-jar-with-dependencies.jar
    ```
    Does not work in this case, as the resolves dependencies are [wrapped in 
    an unordered set](https://github.com/apache/maven-assembly-plugin/blob/ada2cc1c9025f32edb7bfd7fe7e630e9719a71d3/src/main/java/org/apache/maven/plugins/assembly/artifact/DefaultDependencyResolver.java#L247).
 3. `org.apache.maven.plugins:maven-jar-plugin`:
    ```shell
-    mvn clean package -Djar
+    mvn clean package -Pjar
     java -jar target/victim-1.0.jar
    ```
    This plugin creates a JAR file and the dependencies are loaded from 
@@ -55,7 +55,7 @@ commons.lang3.StringUtils`.
 
 4. `org.springframework.boot:spring-boot-maven-plugin`:
    ```shell
-    mvn clean package -Dspring
+    mvn clean package -Pspring
     java -jar target/victim-1.0-spring-boot.jar
    ```
    This plugin directly embeds the dependencies in the JAR file, and the malicious class is included.
@@ -64,7 +64,7 @@ commons.lang3.StringUtils`.
 
 5. `org.apache.felix:maven-bundle-plugin`:
    ```shell
-    mvn clean package -Dbundle
+    mvn clean package -Pbundle
     java -jar target/victim-1.0.jar
    ```
    The order of dependencies have to be reversed because unlike other 
@@ -74,7 +74,7 @@ commons.lang3.StringUtils`.
 
 6. `io.quarkus:quarkus-maven-plugin`:
    ```shell
-    mvn clean package -Dquarkus
+    mvn clean package -Pquarkus
     java -jar target/victim-1.0-quarkus.jar
    ```
    It gives a warning about the exact class being overridden, but the malicious class is still executed.
