@@ -2,7 +2,7 @@
 
 set -e
 
-cd ../java/maven/abstract-project/install-me-first
+cd java/maven/abstract-project/install-me-first
 mvn clean install -q
 cd ../victim
 
