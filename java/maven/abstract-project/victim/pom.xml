@@ -9,8 +9,6 @@
     <version>1.0</version>
 
     <name>victim</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,25 +49,18 @@
                 </plugins>
             </build>
             <dependencies>
-            
-                <!-- <dependency> -->
-                    <!-- <groupId>dev.scored</groupId> -->
-                    <!-- <artifactId>D1</artifactId> -->
-                    <!-- <version>1.0.0</version> -->
-                <!-- </dependency> -->
+                <dependency>
+                    <groupId>dev.scored</groupId>
+                    <artifactId>D1</artifactId>
+                    <version>1.0.0</version>
+                </dependency>
 
                 <!-- gadget dependency -->
-                <!-- <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
-                </dependency> -->
                 <dependency>
                     <groupId>org.postgresql</groupId>
                     <artifactId>postgresql</artifactId>
-                    <version>42.6.0</version>
+                    <version>42.7.7</version>
                 </dependency>
-                
             </dependencies>
         </profile>
 
@@ -112,9 +103,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -168,9 +159,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -206,9 +197,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -246,9 +237,9 @@
             <dependencies>
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
                 <dependency>
                     <groupId>dev.scored</groupId>
@@ -308,9 +299,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -374,20 +365,6 @@
                     </plugin>
                 </plugins>
             </build>
-            <dependencies>
-                <dependency>
-                    <groupId>dev.scored</groupId>
-                    <artifactId>D1</artifactId>
-                    <version>1.0.0</version>
-                </dependency>
-
-                <!-- gadget dependency -->
-                <dependency>
-                    <groupId>org.postgresql</groupId>
-                    <artifactId>postgresql</artifactId>
-                    <version>42.6.0</version>
-                </dependency>
-            </dependencies>
         </profile>
     </profiles>
 </project>

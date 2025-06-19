@@ -18,8 +18,9 @@ There are two projects in this directory:
    victim$ java -jar target/victim-1.0.jar
    ```
    This will output:
-   ```shell
-   hello world!
+   ```text
+   Connection is valid!
+   Connected to port 5432 with user postgres
    ```
 
 ## Malicious Execution
@@ -83,9 +84,17 @@ commons.lang3.StringUtils`.
    ```
 ### Output
 
-All these methods will result in the same output (except 
-`maven-assembly-plugin`) when running the victim application:
+All these methods will result in the same output when running the victim application:
 ```
-shadow file sent to hacker ;)
-hello world!
+88                                88                           88  
+88                                88                           88  
+88                                88                           88  
+88,dPPYba,  ,adPPYYba,  ,adPPYba, 88   ,d8  ,adPPYba,  ,adPPYb,88  
+88P'    "8a ""     `Y8 a8"     "" 88 ,a8"  a8P_____88 a8"    `Y88  
+88       88 ,adPPPPP88 8b         8888[    8PP""""""" 8b       88  
+88       88 88,    ,88 "8a,   ,aa 88`"Yba, "8b,   ,aa "8a,   ,d88  
+88       88 `"8bbdP"Y8  `"Ybbd8"' 88   `Y8a `"Ybbd8"'  `"8bbdP"Y8  
+
+Connection is valid!
+Connected to port 5432 with user postgres
 ```
