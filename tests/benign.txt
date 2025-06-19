@@ -1,2 +1,0 @@
-Connection is valid!
-Connected to port 5432 with user postgres
