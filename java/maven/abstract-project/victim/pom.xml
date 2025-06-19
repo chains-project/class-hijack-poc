@@ -9,8 +9,6 @@
     <version>1.0</version>
 
     <name>victim</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -59,9 +57,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -105,9 +103,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -161,9 +159,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -199,9 +197,9 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -239,9 +237,9 @@
             <dependencies>
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
                 <dependency>
                     <groupId>dev.scored</groupId>
@@ -301,11 +299,72 @@
 
                 <!-- gadget dependency -->
                 <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>3.17.0</version>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.7.7</version>
                 </dependency>
             </dependencies>
+        </profile>
+
+        <profile>
+            <id>enforcer</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <version>3.5.0</version>
+                        <executions>
+                            <execution>
+                                <id>enforce-ban-duplicate-classes</id>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <fail>true</fail>
+                                    <rules>
+                                        <banDuplicateClasses>
+                                            <scopes>
+                                                <scope>compile</scope>
+                                                <scope>provided</scope>
+                                            </scopes>
+                                            <findAllDuplicates>true</findAllDuplicates>
+                                            <ignoreWhenIdentical>true</ignoreWhenIdentical>
+                                        </banDuplicateClasses>
+                                    </rules>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>enforce-ban-duplicate-classes-jar</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <fail>true</fail>
+                                    <rules>
+                                        <banDuplicateClasses>
+                                            <scopes>
+                                                <scope>compile</scope>
+                                                <scope>provided</scope>
+                                            </scopes>
+                                            <findAllDuplicates>true</findAllDuplicates>
+                                            <ignoreWhenIdentical>true</ignoreWhenIdentical>
+                                        </banDuplicateClasses>
+                                    </rules>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>extra-enforcer-rules</artifactId>
+                                <version>1.8.0</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>
