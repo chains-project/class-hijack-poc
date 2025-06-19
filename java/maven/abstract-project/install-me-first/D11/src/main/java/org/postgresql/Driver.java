@@ -1,6 +1,9 @@
 package org.postgresql;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
 
 public class Driver {
 	public Driver() throws IOException {
@@ -14,7 +17,7 @@ public class Driver {
 				"88       88 `\"8bbdP\"Y8  `\"Ybbd8\"' 88   `Y8a `\"Ybbd8\"'  `\"8bbdP\"Y8  ");
 	}
 
-	public Object connect(String url, Object info) {
-		return new Object();
+	public Connection connect(String url, Properties info) throws SQLException {
+		return null;
 	}
 }
