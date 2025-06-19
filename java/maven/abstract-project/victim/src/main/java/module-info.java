@@ -1,5 +1,4 @@
 module victim {
-	requires D1;
-	requires java.sql;
+	requires transitive D1;
 	requires org.postgresql.jdbc;
 }
