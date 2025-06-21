@@ -1,4 +1,6 @@
 module victim {
-	requires transitive D1;
-	requires org.postgresql.jdbc;
+	requires D1; // gadget dependency
+	requires org.postgresql.jdbc; // D2
+
+	requires java.sql;
 }
