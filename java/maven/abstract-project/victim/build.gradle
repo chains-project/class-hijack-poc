@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.clients'
+version = '1.0'
+description = 'victim'
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'dev.scored:D1:1.0.0'
+    implementation 'org.postgresql:postgresql:42.7.7'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Uber JAR configuration
+// This task is added by the Shadow plugin
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'dev.scored.Main',
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
