@@ -98,3 +98,26 @@ All these methods will result in the same output when running the victim applica
 Connection is valid!
 Connected to port 5432 with user postgres
 ```
+
+## Mitigation Strategies
+
+### Sealed jar
+
+The concept is to seal `postgresql` jar.
+
+1. Package victim application using the profile `jar`.
+2. The postgresql jar is in `target/lib/postgresql-42.7.7.jar`.
+3. Edit its `META-INF/MANIFEST.MF` file to add the following line:
+   ```
+   Sealed: true
+   ```
+4. Run the victim application:
+   ```shell
+   java -jar target/victim-1.0.jar
+   ```
+   This will result in the following output:
+   ```text
+   sealing violation: package org.postgresql is sealed
+   java.lang.SecurityException: sealing violation: package org.postgresql is 
+   sealed
+   ```
