@@ -121,3 +121,28 @@ The concept is to seal `postgresql` jar.
    java.lang.SecurityException: sealing violation: package org.postgresql is 
    sealed
    ```
+
+### Java Modules
+
+See https://github.com/FredBonux/class-hijack-poc/tree/mitigation-module
+
+The packaging of victim application will fail.
+
+### Maven Enforcer Plugin
+
+Using any of the above packaging techniques with profile `enforcer` and 
+expect a build failure.
+Example:
+```shell
+mvn clean package -Passembly,enforcer
+```
+```text
+[ERROR] Rule 0: org.codehaus.mojo.extraenforcer.dependencies.BanDuplicateClasses failed with message:
+[ERROR] Duplicate classes found:
+[ERROR] 
+[ERROR]   Found in:
+[ERROR]     dev.scored:D11:jar:1.0.0:compile
+[ERROR]     org.postgresql:postgresql:jar:42.7.7:compile
+[ERROR]   Duplicate classes:
+[ERROR]     org/postgresql/Driver.class
+```
