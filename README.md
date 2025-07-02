@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the Proof-of-Concept (PoC) code and replication scripts for the paper **Maven-Hijack: Software Supply Chain Attack Exploiting Packaging Order** by Frank Reyes, Federico Bono, Aman Sharma, Benoit Baudry, and Martin Monperrus.
+This repository contains the Proof-of-Concept (PoC) code and replication scripts for the paper **Maven-Hijack: Software Supply Chain Attack Exploiting Packaging Order**.
 
 ### Abstract
 
@@ -69,13 +69,3 @@ To mitigate such attacks, consider the following strategies:
 ## Contributing
 
 We welcome contributions to improve this PoC. Please fork the repository and create a pull request with your changes.
-
-## Contact
-
-For any questions or feedback, please contact the authors at:
-
-- Federico Bono: fbono@kth.se
-- Frank Reyes: frankrg@kth.se
-- Aman Sharma: amansha@kth.se
-- Benoit Baudry: benoit.baudry@umontreal.ca
-- Martin Monperrus: monperrus@kth.se
