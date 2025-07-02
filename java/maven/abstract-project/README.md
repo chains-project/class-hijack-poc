@@ -125,6 +125,77 @@ The concept is to seal `postgresql` jar.
 ### Java Modules
 
 See https://github.com/FredBonux/class-hijack-poc/tree/mitigation-module
+or :
+<details>
+<summary>apply this patch</summary>
+
+```diff
+diff --git a/java/maven/abstract-project/install-me-first/D1/src/main/java/dev/scored/D1.java b/java/maven/abstract-project/install-me-first/D1/src/main/java/d1/D1.java
+similarity index 51%
+rename from java/maven/abstract-project/install-me-first/D1/src/main/java/dev/scored/D1.java
+rename to java/maven/abstract-project/install-me-first/D1/src/main/java/d1/D1.java
+index b8d2137..0fa34eb 100644
+--- a/java/maven/abstract-project/install-me-first/D1/src/main/java/dev/scored/D1.java
++++ b/java/maven/abstract-project/install-me-first/D1/src/main/java/d1/D1.java
+@@ -1,4 +1,4 @@
+-package dev.scored;
++package d1;
+
+public class D1 {
+}
+diff --git a/java/maven/abstract-project/install-me-first/D1/src/main/java/module-info.java b/java/maven/abstract-project/install-me-first/D1/src/main/java/module-info.java
+new file mode 100644
+index 0000000..b11ef75
+--- /dev/null
++++ b/java/maven/abstract-project/install-me-first/D1/src/main/java/module-info.java
+@@ -0,0 +1,3 @@
++module D1 {
++       requires D11;
++}
+\ No newline at end of file
+diff --git a/java/maven/abstract-project/install-me-first/D11/src/main/java/dev/scored/D11.java b/java/maven/abstract-project/install-me-first/D11/src/main/java/d11/D11.java
+similarity index 52%
+rename from java/maven/abstract-project/install-me-first/D11/src/main/java/dev/scored/D11.java
+rename to java/maven/abstract-project/install-me-first/D11/src/main/java/d11/D11.java
+index ddca44f..938a60a 100644
+--- a/java/maven/abstract-project/install-me-first/D11/src/main/java/dev/scored/D11.java
++++ b/java/maven/abstract-project/install-me-first/D11/src/main/java/d11/D11.java
+@@ -1,4 +1,4 @@
+-package dev.scored;
++package d11;
+
+public class D11 {
+}
+diff --git a/java/maven/abstract-project/install-me-first/D12/src/main/java/dev/scored/D12.java b/java/maven/abstract-project/install-me-first/D12/src/main/java/d12/D12.java
+similarity index 52%
+rename from java/maven/abstract-project/install-me-first/D12/src/main/java/dev/scored/D12.java
+rename to java/maven/abstract-project/install-me-first/D12/src/main/java/d12/D12.java
+index fc3c8c5..5bfc68d 100644
+--- a/java/maven/abstract-project/install-me-first/D12/src/main/java/dev/scored/D12.java
++++ b/java/maven/abstract-project/install-me-first/D12/src/main/java/d12/D12.java
+@@ -1,4 +1,4 @@
+-package dev.scored;
++package d12;
+
+public class D12 {
+}
+diff --git a/java/maven/abstract-project/victim/src/main/java/module-info.java b/java/maven/abstract-project/victim/src/main/java/module-info.java
+new file mode 100644
+index 0000000..606d291
+--- /dev/null
++++ b/java/maven/abstract-project/victim/src/main/java/module-info.java
+@@ -0,0 +1,6 @@
++module victim {
++       requires D1; // gadget dependency
++       requires org.postgresql.jdbc; // D2
++
++       requires java.sql;
++}
+\ No newline at end of file
+```
+
+</details>
+
 
 The packaging of victim application will fail.
 
