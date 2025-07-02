@@ -1,4 +1,4 @@
-# Java-Class-Hijack: PoC Repository
+# Maven-Hijack: PoC Repository
 
 ## Overview
 
